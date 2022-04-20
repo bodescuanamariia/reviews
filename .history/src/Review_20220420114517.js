@@ -9,25 +9,15 @@ const Review = () => {
   const nextPerson = () => {
     setIndex((index) => {
       let newIndex = index + 1;
-      return checkNumber(newIndex);
+      return newIndex;
     });
   };
 
   const prevPerson = () => {
     setIndex((index) => {
       let newIndex = index - 1;
-      return checkNumber(newIndex);
+      return newIndex;
     });
-  };
-
-  const checkNumber = (number) => {
-    if (number > people.length - 1) {
-      return 0;
-    }
-    if (number < 0) {
-      return people.length - 1;
-    }
-    return number;
   };
 
   return (
